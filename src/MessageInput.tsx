@@ -6,10 +6,11 @@ type MessageInputProps = {};
 const MessageInput = ({}: MessageInputProps) => {
 
   return (
-    <div className="fuck">
-      <input type="text"></input>
-      <button>Submit</button>
-      <p className="fuck">hellpo</p>
+    <div className="container">
+      <div className="inputGroup">
+        <input className="textInput" type="text"></input>
+        <button className="submitButton">Submit</button>
+      </div>
     </div>
   );
 }

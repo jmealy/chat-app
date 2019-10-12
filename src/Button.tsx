@@ -2,16 +2,22 @@ import React, { useState } from 'react';
 import './Button.css';
 
 type ButtonProps = {
-  message: string
+  message: string,
+  onToggle(): void
 }; /* could also use interface */
 
-const Button = ({ message }: ButtonProps) => {
+const Button = ({ message, onToggle }: ButtonProps) => {
   const [buttonState, setButtonState] = useState(false);
+
+  const onButtonClick = () => {
+    setButtonState(!buttonState)
+    onToggle();
+  }
 
   return (
     <div >
       <button
-        onClick={() => setButtonState(!buttonState)}
+        onClick={onButtonClick}
         className={ buttonState ? 'active': ''}
       >
         {message}

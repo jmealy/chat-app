@@ -1,4 +1,15 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%
 }
 
+.chat {
+  flex-grow: 1;  
+}
+
+.messageInput {
+  min-height: 70px;
+  background-color: blue;
+}

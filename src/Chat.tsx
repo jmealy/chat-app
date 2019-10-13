@@ -14,13 +14,13 @@ const Chat = ({}: ChatProps) => {
   const messages = [
     { author: "yo", text: "hi there this is a message for the chat", timeStamp: '17.07'},
     { author: "Anonymous", text: "hi there this is another  message for the chat, how you like that?", timeStamp: '17.07'},
-    { author: "Anonymous", text: "hi there", timeStamp: '17.07'},
-    { author: "Anonymous", text: "hi there this is a message for the chat", timeStamp: '17.07'},
-    { author: "Anonymous", text: "hi there this is another  message for the chat, how you like that?", timeStamp: '17.07'},
-    { author: "Anonymous", text: "hi there", timeStamp: '17.07'},
-    { author: "Anonymous", text: "hi there this is a message for the chat", timeStamp: '17.07'},
-    { author: "Anonymous", text: "hi there this is another  message for the chat, how you like that?", timeStamp: '17.07'},
-    { author: "yo", text: "hi there", timeStamp: '17.07'},
+    // { author: "Anonymous", text: "hi there", timeStamp: '17.07'},
+    // { author: "Anonymous", text: "hi there this is a message for the chat", timeStamp: '17.07'},
+    // { author: "Anonymous", text: "hi there this is another  message for the chat, how you like that?", timeStamp: '17.07'},
+    // { author: "Anonymous", text: "hi there", timeStamp: '17.07'},
+    // { author: "Anonymous", text: "hi there this is a message for the chat", timeStamp: '17.07'},
+    // { author: "Anonymous", text: "hi there this is another  message for the chat, how you like that?", timeStamp: '17.07'},
+    // { author: "yo", text: "hi there", timeStamp: '17.07'},
   ]
 
   const renderMessage = (message: Message) => (

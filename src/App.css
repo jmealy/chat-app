@@ -6,10 +6,10 @@
 }
 
 .chat {
-  flex-grow: 1;
+  overflow-y: auto;
   background-color: #F1F8FB;
-  display: flex;
 }
 
 .messageInput {
+  flex-shrink: 0;
 }

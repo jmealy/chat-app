@@ -1,7 +1,6 @@
-/* .chatContainer {
-  background-color: #EEF7FA;
-  height: 100%;
-} */ 
+.chatContainer {
+  align-self: flex-end;
+} 
 /* try to move color here */
 
 .message {

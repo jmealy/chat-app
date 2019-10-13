@@ -8,6 +8,7 @@
 .chat {
   flex-grow: 1;
   background-color: #F1F8FB;
+  display: flex;
 }
 
 .messageInput {

@@ -1,0 +1,32 @@
+/* .chatContainer {
+  background-color: #EEF7FA;
+  height: 100%;
+} */ 
+/* try to move color here */
+
+.message {
+  padding: 10px 15px;
+  margin: 10px 0;
+  background-color: white;
+}
+
+.messageHeader {
+  display: flex;
+  flex-direction: row;
+}
+
+.author {
+  font-weight: bold;
+  color: #7EC0EE;
+  font-size: 18px;
+  margin: 0;
+}
+
+.timeStamp {
+  margin-left: auto;
+  margin-top: 2px;  
+}
+
+.messageBody {
+  margin: 0;
+}

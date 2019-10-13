@@ -1,12 +1,13 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
   display: flex;
   flex-direction: column;
   height: 100%
 }
 
 .chat {
-  flex-grow: 1;  
+  flex-grow: 1;
+  background-color: #F1F8FB;
 }
 
 .messageInput {

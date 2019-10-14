@@ -11,18 +11,14 @@ type Message = {
 };
 
 const App: React.FC = () => {
-
-  const initialMessages: Message[] = [];
-
-
-  const [messages, setMessages] = useState(initialMessages);
+  const [messages, setMessages] = useState<Message[]>([]);
 
   const onMessageSubmit = (message: string) => {
-    const timeStamp = new Date();
+    const currentTime = new Date();
     const newMessage = {
       author: 'Anon',
       text: message,
-      timeStamp: `${timeStamp.getHours()}:${timeStamp.getMinutes()}`
+      timeStamp: `${currentTime.getHours()}:${currentTime.getMinutes()}`
     }
 
     setMessages([...messages, newMessage])

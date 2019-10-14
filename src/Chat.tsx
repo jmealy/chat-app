@@ -2,15 +2,13 @@ import React, { useContext } from 'react';
 import MessageContext from './MessageContext'
 import './Chat.css';
 
-type ChatProps = {};
-
 type Message = {
   author: string,
   text: string,
   timeStamp: string
 };
 
-const Chat = ({}: ChatProps) => {
+const Chat = () => {
 
   const messages = useContext(MessageContext)
 
@@ -25,14 +23,13 @@ const Chat = ({}: ChatProps) => {
   );
 
   return (
-    <div className="chatContainer">
+    <>
       {
         messages.map((message, index) => (
           renderMessage(message)
         ))
       }
-      
-    </div>
+    </>
   );
 }
 

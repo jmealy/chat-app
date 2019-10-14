@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react';
+import React, { useState } from 'react';
 import MessageInput from './MessageInput'
 import Chat from './Chat'
 import { MessageProvider } from './MessageContext'
@@ -9,8 +9,6 @@ type Message = {
   text: string,
   timeStamp: string
 };
-
-const ChatContext = createContext('default');
 
 const App: React.FC = () => {
 
@@ -28,7 +26,6 @@ const App: React.FC = () => {
     }
 
     setMessages([...messages, newMessage])
-    console.log(messages);
   }
 
   return (

@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import './MessageInput.css';
 
 type MessageInputProps = {
@@ -8,8 +8,9 @@ type MessageInputProps = {
 const MessageInput = ({onMessageSubmit}: MessageInputProps) => {
   const inputEl = useRef<HTMLInputElement>(null);
 
-  const onTextSubmit = (event: any) => {
+  const onTextSubmit = (event: { preventDefault(): void}) => {
     if(!inputEl || !inputEl.current) return;
+
     event.preventDefault();
     const inputText = inputEl.current.value;
 
@@ -22,12 +23,10 @@ const MessageInput = ({onMessageSubmit}: MessageInputProps) => {
   };
 
   return (
-    <div className="container">
-      <form className="inputGroup" onSubmit={onTextSubmit}>
-        <input className="textInput" ref={inputEl} type="text"></input>
-        <input className="submitButton" type="submit" value="Submit" />
-      </form>
-    </div>
+    <form className="formContainer" onSubmit={onTextSubmit}>
+      <input className="textInput" ref={inputEl} type="text"></input>
+      <input className="submitButton" type="submit" value="Submit" />
+    </form>
   );
 }
 

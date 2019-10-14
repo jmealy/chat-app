@@ -5,6 +5,8 @@
 }
 
 .chat {
+  display: flex;
+  flex-direction: column-reverse;
   overflow-y: auto;
   background-color: #F1F8FB;
   height: calc(100% - 70px);

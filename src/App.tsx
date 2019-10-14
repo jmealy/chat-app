@@ -12,19 +12,6 @@ type Message = {
 
 const ChatContext = createContext('default');
 
-const testMessages = [
-  { author: "yo", text: "hi there this is a message for the chat", timeStamp: '17.07'},
-  { author: "Anonymous", text: "hi there this is another  message for the chat, how you like that?", timeStamp: '17.07'},
-  { author: "Anonymous", text: "hi there", timeStamp: '17.07'},
-  { author: "Anonymous", text: "hi there this is a message for the chat", timeStamp: '17.07'},
-  { author: "Anonymous", text: "hi there this is another  message for the chat, how you like that?", timeStamp: '17.07'},
-  { author: "Anonymous", text: "hi there", timeStamp: '17.07'},
-  { author: "Anonymous", text: "hi there this is a message for the chat", timeStamp: '17.07'},
-  { author: "Anonymous", text: "hi there this is another  message for the chat, how you like that?", timeStamp: '17.07'},
-  // { author: "yo", text: "hi there", timeStamp: '17.07'},
-]
-
-
 const App: React.FC = () => {
 
   const initialMessages: Message[] = [];
@@ -35,7 +22,7 @@ const App: React.FC = () => {
   const onMessageSubmit = (message: string) => {
     const timeStamp = new Date();
     const newMessage = {
-      author: 'anon',
+      author: 'Anon',
       text: message,
       timeStamp: `${timeStamp.getHours()}:${timeStamp.getMinutes()}`
     }
@@ -46,7 +33,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <MessageProvider value={testMessages}>
+      <MessageProvider value={messages}>
         <div className="chat"><Chat/></div>
       </MessageProvider>
       <div className="messageInput">
@@ -57,15 +44,5 @@ const App: React.FC = () => {
     </div>
   );
 }
-
-  // return (
-  //   <div className="App">
-  //     <Button
-  //       message = "toggle button"
-  //       onToggle={()=>{ console.log('toggle')}}
-  //     />
-  //   </div>
-  // );
-// }
 
 export default App;

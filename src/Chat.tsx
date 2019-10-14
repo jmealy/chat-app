@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import MessageContext from './MessageContext'
 import './Chat.css';
 
 type ChatProps = {};
@@ -11,17 +12,7 @@ type Message = {
 
 const Chat = ({}: ChatProps) => {
 
-  const messages = [
-    { author: "yo", text: "hi there this is a message for the chat", timeStamp: '17.07'},
-    { author: "Anonymous", text: "hi there this is another  message for the chat, how you like that?", timeStamp: '17.07'},
-    // { author: "Anonymous", text: "hi there", timeStamp: '17.07'},
-    // { author: "Anonymous", text: "hi there this is a message for the chat", timeStamp: '17.07'},
-    // { author: "Anonymous", text: "hi there this is another  message for the chat, how you like that?", timeStamp: '17.07'},
-    // { author: "Anonymous", text: "hi there", timeStamp: '17.07'},
-    // { author: "Anonymous", text: "hi there this is a message for the chat", timeStamp: '17.07'},
-    // { author: "Anonymous", text: "hi there this is another  message for the chat, how you like that?", timeStamp: '17.07'},
-    // { author: "yo", text: "hi there", timeStamp: '17.07'},
-  ]
+  const messages = useContext(MessageContext)
 
   const renderMessage = (message: Message) => (
     <div className="message">

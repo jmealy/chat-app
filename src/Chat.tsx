@@ -12,8 +12,8 @@ const Chat = () => {
 
   const messages = useContext(MessageContext)
 
-  const renderMessage = (message: Message) => (
-    <div className="message">
+  const renderMessage = (message: Message, index: number) => (
+    <div className="message" key={index.toString()}>
       <div className="messageHeader">
         <p className="author">{message.author}</p>
         <p className="timeStamp">{message.timeStamp}</p>
@@ -25,8 +25,8 @@ const Chat = () => {
   return (
     <>
       {
-        messages.map((message, index) => (
-          renderMessage(message)
+        messages.reverse().map((message: Message, index: number) => (
+          renderMessage(message, index)
         ))
       }
     </>

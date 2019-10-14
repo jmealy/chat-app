@@ -5,10 +5,20 @@ import './App.css';
 
 const App: React.FC = () => {
 
+  const [messages, setMessages] = useState({});
+
+  const onMessageSubmit = (message: string) => {
+    console.log(message);
+  }
+
   return (
     <div className="App">
       <div className="chat"><Chat/></div>
-      <div className="messageInput"><MessageInput/></div>
+      <div className="messageInput">
+        <MessageInput
+          onMessageSubmit={onMessageSubmit}
+        />
+      </div>
     </div>
   );
 }

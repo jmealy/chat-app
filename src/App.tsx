@@ -8,7 +8,13 @@ const App: React.FC = () => {
   const [messages, setMessages] = useState({});
 
   const onMessageSubmit = (message: string) => {
-    console.log(message);
+    const timeStamp = new Date();
+    const newMessage = {
+      author: 'anon',
+      text: message,
+      timeStamp: `${timeStamp.getHours()}:${timeStamp.getMinutes()}`
+    }
+    console.log(newMessage);
   }
 
   return (
